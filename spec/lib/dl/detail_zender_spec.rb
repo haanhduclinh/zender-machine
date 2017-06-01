@@ -5,8 +5,8 @@ RSpec.describe Dl::Zender::DetailZender do
 
   describe '#DetailZender' do
 
-  let(:html_file) {'./www/html/234.html'}
-  let(:sample_thumb) {'http://dreamicus.com/data/image/image-06.jpg'}
+  let(:html_file) { './www/html/234.html' }
+  let(:sample_thumb) { 'http://dreamicus.com/data/image/image-06.jpg' }
 
   it 'generates html detail file' do
     expect(File.exist?(html_file)).to be_truthy
@@ -22,7 +22,7 @@ RSpec.describe Dl::Zender::DetailZender do
     detail.meta = {
       author: 'Duc Linh',
       description: 'This is test of detail',
-      title: 'this is title',
+      title: 'this is title'
     }
 
     tags = ['haanhduclinh', 'Lanscape', 'Ha Noi']
@@ -38,14 +38,14 @@ RSpec.describe Dl::Zender::DetailZender do
 
     share = Dl::Zender::DataClass::Share.new
     share.categories = [
-      { name: 'cat1', url: 'linh/123.html'},
-      { name: 'cat2', url: 'linh/123.html'},
-      { name: 'cat3', url: 'linh/123.html'},
+      { name: 'cat1', url: 'linh/123.html' },
+      { name: 'cat2', url: 'linh/123.html' },
+      { name: 'cat3', url: 'linh/123.html' }
     ]
 
     data = {
       data: detail,
-      share: share,
+      share: share
     }
     zender.zending(data: data, url: '234')
     end
