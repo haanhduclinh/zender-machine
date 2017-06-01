@@ -3,3 +3,6 @@ mysql:
   username: <%= ENV['MYSQL_USER'] %>
   password: <%= ENV['MYSQL_PASS'] %>
   database: <%= ENV['MYSQL_DB'] %>
+seo:
+  title_limit: 65
+  description_limit: 120

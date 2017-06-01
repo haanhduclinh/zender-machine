@@ -19,15 +19,15 @@ RSpec.describe Dl::Zender::DetailZender do
   before do
     zender = Dl::Zender::DetailZender.new(output_folder: './www/html')
     detail = Dl::Zender::DataClass::Detail.new
-    detail.title = 'Hi hi day la title test'
     detail.meta = {
       author: 'Duc Linh',
-      description: 'This is test of detail'
+      description: 'This is test of detail',
+      title: 'this is title',
     }
 
     tags = ['haanhduclinh', 'Lanscape', 'Ha Noi']
     detail.post = {
-      header: 'This is header.',
+      title: 'Hello world!',
       thumbnail: sample_thumb,
       content: 'This is content.',
       author: 'Eric DUC LINH',
