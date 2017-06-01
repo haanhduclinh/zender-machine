@@ -1,0 +1,274 @@
+GIT
+  remote: git://github.com/haanhduclinh/engtagger.git
+  revision: 83faf3a39cd89d5af3ab291b054868e88225fc34
+  specs:
+    engtagger (0.2.1)
+
+GIT
+  remote: git://github.com/rspec/rspec-core.git
+  revision: d0d67bf0909def9cfe35e120f82844ff59ebf57c
+  branch: master
+  specs:
+    rspec-core (3.6.0.beta2)
+      rspec-support (= 3.6.0.beta2)
+
+GIT
+  remote: git://github.com/rspec/rspec-expectations.git
+  revision: cd3d6a1d81bd677e70bdf7b475f12eeae357ff6a
+  branch: master
+  specs:
+    rspec-expectations (3.6.0.beta2)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.6.0.beta2)
+
+GIT
+  remote: git://github.com/rspec/rspec-mocks.git
+  revision: aeee38af6433cda8db1c720a4991053ed03687e1
+  branch: master
+  specs:
+    rspec-mocks (3.6.0.beta2)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.6.0.beta2)
+
+GIT
+  remote: git://github.com/rspec/rspec-support.git
+  revision: 7d13228532c1138bd30013700c4a36ba19e430bd
+  branch: master
+  specs:
+    rspec-support (3.6.0.beta2)
+
+GIT
+  remote: git://github.com/rspec/rspec.git
+  revision: bb618dac1400efa55ea76f8fd2875fc58741936b
+  branch: master
+  specs:
+    rspec (3.6.0.beta2)
+      rspec-core (= 3.6.0.beta2)
+      rspec-expectations (= 3.6.0.beta2)
+      rspec-mocks (= 3.6.0.beta2)
+
+GIT
+  remote: git@github.com:haanhduclinh/gettyimages-api_ruby.git
+  revision: 591ad0f7931718a922222e33781b4baa6efe8281
+  specs:
+    ConnectSDK (1.0.2.Beta)
+
+GIT
+  remote: git@github.com:haanhduclinh/linkedin.git
+  revision: a7c2e94fa659fe8910e89225b44f50202a33e4d8
+  specs:
+    linkedin (1.1.0)
+      hashie (~> 3.0)
+      multi_json (~> 1.0)
+      oauth (~> 0.4)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activesupport (5.0.2)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (~> 0.7)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+    addressable (2.5.0)
+      public_suffix (~> 2.0, >= 2.0.2)
+    ast (2.3.0)
+    auto_html (2.0.0)
+      gemoji (~> 2.1)
+      redcarpet (~> 3.3)
+      rinku (~> 1.7)
+      tag_helper (~> 0.5)
+    bind-it (0.2.7)
+      rjb (~> 1.4.3)
+    bing-search (2.0.0)
+    chronic (0.10.2)
+    coderay (1.1.1)
+    concurrent-ruby (1.0.5)
+    config (1.4.0)
+      activesupport (>= 3.0)
+      deep_merge (~> 1.1.1)
+    cookiejar (0.3.3)
+    debase (0.2.1)
+      debase-ruby_core_source
+    debase-ruby_core_source (0.9.7)
+    declarative (0.0.9)
+    declarative-option (0.1.0)
+    deep_merge (1.1.1)
+    diff-lcs (1.3)
+    dotenv (2.0.1)
+    dotenv-rails (2.0.1)
+      dotenv (= 2.0.1)
+    em-http-request (1.1.5)
+      addressable (>= 2.3.4)
+      cookiejar (!= 0.3.1)
+      em-socksify (>= 0.3)
+      eventmachine (>= 1.0.3)
+      http_parser.rb (>= 0.6.0)
+    em-socksify (0.3.1)
+      eventmachine (>= 1.0.0.beta.4)
+    em-websocket (0.5.1)
+      eventmachine (>= 0.12.9)
+      http_parser.rb (~> 0.6.0)
+    eventmachine (1.2.3)
+    faker (1.7.3)
+      i18n (~> 0.5)
+    faraday (0.11.0)
+      multipart-post (>= 1.2, < 3)
+    gemoji (2.1.0)
+    google-api-client (0.10.1)
+      addressable (~> 2.3)
+      googleauth (~> 0.5)
+      httpclient (~> 2.7)
+      hurley (~> 0.1)
+      memoist (~> 0.11)
+      mime-types (>= 1.6)
+      representable (~> 3.0)
+      retriable (>= 2.0, < 4.0)
+    googleauth (0.5.1)
+      faraday (~> 0.9)
+      jwt (~> 1.4)
+      logging (~> 2.0)
+      memoist (~> 0.12)
+      multi_json (~> 1.11)
+      os (~> 0.9)
+      signet (~> 0.7)
+    hashie (3.5.5)
+    highscore (1.2.1)
+      whatlanguage (>= 1.0.0)
+    http_parser.rb (0.6.0)
+    httpclient (2.8.3)
+    hurley (0.2)
+    i18n (0.8.1)
+    jwt (1.5.6)
+    le (2.7.5)
+    little-plugger (1.1.4)
+    logging (2.2.0)
+      little-plugger (~> 1.1)
+      multi_json (~> 1.10)
+    memoist (0.15.0)
+    method_source (0.8.2)
+    mime-types (3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2016.0521)
+    mini_portile2 (2.1.0)
+    minitest (5.10.1)
+    multi_json (1.12.1)
+    multipart-post (2.0.0)
+    mysql2 (0.4.5)
+    nokogiri (1.7.2)
+      mini_portile2 (~> 2.1.0)
+    oauth (0.5.1)
+    os (0.9.6)
+    parser (2.4.0.0)
+      ast (~> 2.2)
+    powerpack (0.1.1)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    public_suffix (2.0.5)
+    rack (1.6.5)
+    rack-protection (1.5.3)
+      rack
+    rainbow (2.2.1)
+    rake (12.0.0)
+    redcarpet (3.4.0)
+    redis (3.3.3)
+    representable (3.0.3)
+      declarative (< 0.1.0)
+      declarative-option (< 0.2.0)
+      uber (< 0.2.0)
+    retriable (3.0.1)
+    retryable-rb (1.1.0)
+    rinku (1.7.3)
+    rjb (1.4.9)
+    rubocop (0.47.1)
+      parser (>= 2.3.3.1, < 3.0)
+      powerpack (~> 0.1)
+      rainbow (>= 1.99.1, < 3.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (~> 1.0, >= 1.0.1)
+    ruby-debug-ide (0.6.0)
+      rake (>= 0.8.1)
+    ruby-progressbar (1.8.1)
+    rubypress (1.2.2)
+      retryable-rb
+      xmlrpc
+    shoulda (3.5.0)
+      shoulda-context (~> 1.0, >= 1.0.1)
+      shoulda-matchers (>= 1.4.1, < 3.0)
+    shoulda-context (1.2.2)
+    shoulda-matchers (2.8.0)
+      activesupport (>= 3.0.0)
+    signet (0.7.3)
+      addressable (~> 2.3)
+      faraday (~> 0.9)
+      jwt (~> 1.5)
+      multi_json (~> 1.10)
+    sinatra (1.4.8)
+      rack (~> 1.5)
+      rack-protection (~> 1.4)
+      tilt (>= 1.3, < 3)
+    slop (3.6.0)
+    stanford-core-nlp (0.5.3)
+      bind-it (~> 0.2.7)
+    stemmer (1.0.1)
+    stringex (2.7.1)
+    tag_helper (0.5.0)
+    thread_safe (0.3.6)
+    tilt (2.0.7)
+    tzinfo (1.2.2)
+      thread_safe (~> 0.1)
+    uber (0.1.0)
+    unicode-display_width (1.1.3)
+    whatlanguage (1.0.6)
+    whenever (0.9.7)
+      chronic (>= 0.6.3)
+    xmlrpc (0.3.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  ConnectSDK!
+  activesupport
+  auto_html
+  bing-search
+  config (= 1.4.0)
+  debase
+  dotenv-rails
+  em-http-request
+  em-websocket
+  engtagger!
+  eventmachine
+  faker
+  google-api-client
+  googleauth
+  highscore
+  le
+  linkedin!
+  mysql2 (~> 0.4.5)
+  nokogiri
+  pry
+  redis
+  rspec!
+  rspec-core!
+  rspec-expectations!
+  rspec-mocks!
+  rspec-support!
+  rubocop (~> 0.47.1)
+  ruby-debug-ide
+  rubypress
+  shoulda
+  sinatra
+  stanford-core-nlp
+  stemmer (~> 1.0, >= 1.0.1)
+  stringex (~> 2.7, >= 2.7.1)
+  whatlanguage (~> 1.0, >= 1.0.6)
+  whenever
+
+RUBY VERSION
+   ruby 2.3.0p0
+
+BUNDLED WITH
+   1.14.4
