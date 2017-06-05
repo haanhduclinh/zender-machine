@@ -16,39 +16,18 @@
           <div class="col-md-4 col-footer footer-2">
             <div class="footer-heading"><h4>Tags</h4></div>
             <div class="content">
-              <a href="#">animals</a>
-              <a href="#">cooking</a>
-              <a href="#">countries</a>
-              <a href="#">city</a>
-              <a href="#">children</a>
-              <a href="#">home</a>
-              <a href="#">likes</a>
-              <a href="#">photo</a>
-              <a href="#">link</a>
-              <a href="#">law</a>
-              <a href="#">shopping</a>
-              <a href="#">skate</a>
-              <a href="#">scholl</a>
-              <a href="#">video</a>
-              <a href="#">travel</a>
-              <a href="#">images</a>
-              <a href="#">love</a>
-              <a href="#">lists</a>
-              <a href="#">makeup</a>
-              <a href="#">media</a>
-              <a href="#">password</a>
-              <a href="#">pagination</a>
-              <a href="#">wildlife</a>
+              <% @share.categories.each do |category| %>
+                <a href="<%= category[:url] %>"><%= category[:name] %></a>
+              <% end %>
             </div>
           </div>
           <div class="col-md-4 col-footer footer-3">
-            <div class="footer-heading"><h4>Link List</h4></div>
+            <div class="footer-heading"><h4>Related Post</h4></div>
             <div class="content">
               <ul>
-                <li><a href="#">MOST VISITED COUNTRIES</a></li>
-                <li><a href="#">5 PLACES THAT MAKE A GREAT HOLIDAY</a></li>
-                <li><a href="#">PEBBLE TIME STEEL IS ON TRACK TO SHIP IN JULY</a></li>
-                <li><a href="#">STARTUP COMPANY’S CO-FOUNDER TALKS ON HIS NEW PRODUCT</a></li>
+                <% @share.footer_categories. each do |footer_category| %>
+                  <li><a title='<%= footer_category[:name] %>' href="<%= footer_category[:url] %>"><%= footer_category[:name] %></a></li>
+                <% end %>
               </ul>
             </div>
           </div>
@@ -56,6 +35,6 @@
       </div>
     </div>
     <div class="copy-right">
-      <p>Copyright 2015 - <a href="http://www.365bootstrap.com" target="_blank" rel="nofollow">Bootstrap Themes</a> Designed by 365Bootstrap.com</p>
+      <p>Copyright 2017 - <a href="https://it-kn.com" target="_blank" rel="nofollow">IT-KN.COM</a> Power by Zender Machine</p>
     </div>
   </footer>

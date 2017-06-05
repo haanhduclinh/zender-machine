@@ -29,6 +29,8 @@ gem 'ruby-debug-ide'
 gem 'debase'
 gem 'faker'
 gem 'linkedin', git: 'git@github.com:haanhduclinh/linkedin.git'
+gem 'google-cloud-storage'
+gem 'fastimage'
 
 group :test do
   gem 'shoulda'

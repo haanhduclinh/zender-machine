@@ -13,6 +13,9 @@
             <span><i class="fa fa-heart"></i>1,200</span>
           </div>
           <p style="margin-top: 20px">
+            <% if @data.post[:thumbnail]%>
+              <img src='<%= @data.post[:thumbnail]%>' title='<%= @data.post[:title] %>' alt='<%= @data.post[:title] %>' >
+            <% end %>
             <%= @data.post[:content] %>
           </p>
           <div class="vid-tags">
@@ -21,33 +24,6 @@
             <% end %>
           </div>
           <div class="line"></div>
-          <div class="comment">
-            <h3>Leave A Comment</h3>
-            <form name="form1" method="post" action="">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                  <input type="text" class="form-control input-lg" name="name" id="name" placeholder="Enter name" required="required" />
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <input type="email" class="form-control input-lg" name="email" id="email" placeholder="Enter email" required="required" />
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <textarea name="message" id="message" class="form-control" rows="4" cols="25" required="required"
-                    placeholder="Message"></textarea>
-                  </div>
-                  <button type="submit" class="btn btn-4 btn-block" name="btnBooking" id="btnBbooking">
-                Submit</button>
-                </div>
-              </div>
-            </form>
-          </div>
         </div>
 
         <div class="box">
@@ -56,66 +32,30 @@
           </div>
           <div class="box-content">
             <div class="row">
-              <div class="col-md-4">
-                <div class="wrap-vid">
-                  <div class="zoom-container">
-                    <div class="zoom-caption">
-                      <span>Youtube</span>
-                      <a href="single.html">
-                        <i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
-                      </a>
-                      <p>Video's Name</p>
+              <% @data.post[:right_related].each do |p| %>
+                <div class="col-md-4">
+                  <div class="wrap-vid">
+                    <div class="zoom-container">
+                      <div class="zoom-caption">
+                        <a href="<%= p[:url] %>">
+                          <i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
+                        </a>
+                        <p><%= p[:name] %></p>
+                      </div>
+                      <% if p[:thumbnail] %>
+                        <%= p[:thumbnail] %>
+                      <% else %>
+                        <img src="images/2.jpg" />
+                      <% end %>
                     </div>
-                    <img src="images/2.jpg" />
-                  </div>
-                  <h3 class="vid-name"><a href="#">Video's Name</a></h3>
-                  <div class="info">
-                    <h5>By <a href="#">Kelvin</a></h5>
-                    <span><i class="fa fa-calendar"></i>25/3/2015</span>
-                    <span><i class="fa fa-heart"></i>1,200</span>
+                    <h3 class="vid-name"><a href="#"><%= p[:name] %></a></h3>
+                    <div class="info">
+                      <span><i class="fa fa-calendar"></i><%= p[:post_date].strftime("%d %b %Y") %></span>
+                      <span><i class="fa fa-heart"></i><%= rand(1..1000) %></span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-4">
-                <div class="wrap-vid">
-                  <div class="zoom-container">
-                    <div class="zoom-caption">
-                      <span>Youtube</span>
-                      <a href="single.html">
-                        <i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
-                      </a>
-                      <p>Video's Name</p>
-                    </div>
-                    <img src="images/2.jpg" />
-                  </div>
-                  <h3 class="vid-name"><a href="#">Video's Name</a></h3>
-                  <div class="info">
-                    <h5>By <a href="#">Kelvin</a></h5>
-                    <span><i class="fa fa-calendar"></i>25/3/2015</span>
-                    <span><i class="fa fa-heart"></i>1,200</span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="wrap-vid">
-                  <div class="zoom-container">
-                    <div class="zoom-caption">
-                      <span>Youtube</span>
-                      <a href="single.html">
-                        <i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
-                      </a>
-                      <p>Video's Name</p>
-                    </div>
-                    <img src="images/2.jpg" />
-                  </div>
-                  <h3 class="vid-name"><a href="#">Video's Name</a></h3>
-                  <div class="info">
-                    <h5>By <a href="#">Kelvin</a></h5>
-                    <span><i class="fa fa-calendar"></i>25/3/2015</span>
-                    <span><i class="fa fa-heart"></i>1,200</span>
-                  </div>
-                </div>
-              </div>
+              <% end %>
             </div>
           </div>
         </div>
@@ -225,63 +165,31 @@
         </div>
         <!---- Start Widget ---->
         <div class="widget ">
-          <div class="heading"><h4>Top News</h4></div>
-          <div class="content">
-            <div class="wrap-vid">
-              <div class="zoom-container">
-                <div class="zoom-caption">
-                  <span>Youtube</span>
-                  <a href="single.html">
-                    <i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
-                  </a>
-                  <p>Video's Name</p>
+          <div class="heading"><h4>Top</h4></div>
+          <% @share.footer_categories.each do |p| %>
+            <div class="content">
+              <div class="wrap-vid">
+                <div class="zoom-container">
+                  <div class="zoom-caption">
+                    <a href="<%= p[:url] %>">
+                      <i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
+                    </a>
+                    <p><%= p[:name] %></p>
+                  </div>
+                  <% if p[:thumbnail] %>
+                    <%= p[:thumbnail] %>
+                  <% else %>
+                    <img src="images/1.jpg" />
+                  <% end %>
                 </div>
-                <img src="images/1.jpg" />
-              </div>
-              <h3 class="vid-name"><a href="#">Video's Name</a></h3>
-              <div class="info">
-                <h5>By <a href="#">Kelvin</a></h5>
-                <span><i class="fa fa-calendar"></i>25/3/2015</span>
-                <span><i class="fa fa-heart"></i>1,200</span>
+                <h3 class="vid-name"><a href="<%= p[:url] %>"><%= p[:name] %></a></h3>
+                <div class="info">
+                  <span><i class="fa fa-calendar"></i><%= p[:post_date].strftime("%d/%m/%Y") %></span>
+                  <span><i class="fa fa-heart"></i><%= rand(0..1000) %></span>
+                </div>
               </div>
             </div>
-            <div class="wrap-vid">
-              <div class="zoom-container">
-                <div class="zoom-caption">
-                  <span>Youtube</span>
-                  <a href="single.html">
-                    <i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
-                  </a>
-                  <p>Video's Name</p>
-                </div>
-                <img src="images/2.jpg" />
-              </div>
-              <h3 class="vid-name"><a href="#">Video's Name</a></h3>
-              <div class="info">
-                <h5>By <a href="#">Kelvin</a></h5>
-                <span><i class="fa fa-calendar"></i>25/3/2015</span>
-                <span><i class="fa fa-heart"></i>1,200</span>
-              </div>
-            </div>
-            <div class="wrap-vid">
-              <div class="zoom-container">
-                <div class="zoom-caption">
-                  <span>Youtube</span>
-                  <a href="single.html">
-                    <i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
-                  </a>
-                  <p>Video's Name</p>
-                </div>
-                <img src="images/3.jpg" />
-              </div>
-              <h3 class="vid-name"><a href="#">Video's Name</a></h3>
-              <div class="info">
-                <h5>By <a href="#">Kelvin</a></h5>
-                <span><i class="fa fa-calendar"></i>25/3/2015</span>
-                <span><i class="fa fa-heart"></i>1,200</span>
-              </div>
-            </div>
-          </div>
+          <% end %>
         </div>
       </div>
     </div>

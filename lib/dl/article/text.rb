@@ -140,6 +140,17 @@ module Dl::Article
     def text_to_html(text)
       simple_format = AutoHtml::SimpleFormat.new
       # base_format = AutoHtml::Pipeline.new(simple_format)
-      simple_format.call(text)
+      text = simple_format.call(text)
+      text.lines.map { |line| h2?(line) ? "<h2>#{line}</h2>" : line }.join(' ')
+    end
+
+    def h2?(text)
+      number_of_keyword = text.split(' ').size
+      number_of_character = text.size
+      (1..10).include?(number_of_keyword) && (1..50).include?(number_of_character)
+    end
+
+    def remove_p_and_br_html(text)
+      text.gsub(/<[^>]*>/ui,'')
     end
 end
